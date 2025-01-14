@@ -1,7 +1,12 @@
 const express = require("express");
 const axios = require("axios");
+const cors = require("cors");
+
 const app = express();
 const port = 3001;
+
+// Enable CORS for all origins
+app.use(cors());
 
 // Helper function to query Prometheus
 const queryPrometheus = async (query) => {
